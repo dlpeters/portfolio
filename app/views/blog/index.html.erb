@@ -1,0 +1,9 @@
+<% @posts.each do |post| %>
+   <h1><%= link_to post.title, blog_url(post) %></h1>
+   <div class='post'>
+     <%=  post.content %>
+   </div>
+   <div class='post_footer'>
+     Created: <%=  post.created_at.strftime('%m/%d/%Y %H:%M') %>
+   </div>
+<% end %>

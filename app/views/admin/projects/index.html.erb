@@ -1,0 +1,23 @@
+<h1>Projects</h1>
+<%= link_to "New Project", new_admin_project_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%= project.title %></td>
+        <td>
+          <%= link_to "Edit", edit_admin_project_path(project) %> |
+          <%= link_to "Delete", admin_project_path(project), method: delete %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

@@ -1,0 +1,3 @@
+<%= form_for :post, url: blog_index_path, html: {method: :post} do |f| %>
+  <%= render :partial => 'form', :locals => {f: f}   %>
+<% end %>
